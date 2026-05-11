@@ -1,105 +1,51 @@
 <!DOCTYPE html>
-<html lang="sk">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>FAJNR LORE – 3</title>
-    <!-- secretkey = KFSRNJB -->
-    <style>
-        body {
-            background: #05060a;
-            color: #f5f5f5;
-            font-family: "Segoe UI", sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-        }
-        h1 {
-            letter-spacing: 4px;
-            margin-bottom: 40px;
-        }
-        .box {
-            width: 80%;
-            max-width: 600px;
-            text-align: center;
-        }
-        input {
-            width: 100%;
-            padding: 12px 16px;
-            border-radius: 6px;
-            border: none;
-            margin-top: 16px;
-            font-size: 16px;
-        }
-        button {
-            margin-top: 16px;
-            padding: 10px 20px;
-            border-radius: 6px;
-            border: none;
-            background: #4c6fff;
-            color: white;
-            font-size: 15px;
-            cursor: pointer;
-        }
-        button:hover {
-            background: #3a55d0;
-        }
-        .hint-label {
-            margin-top: 32px;
-            font-size: 14px;
-            opacity: 0.8;
-        }
-        .hint {
-            margin-top: 8px;
-            font-size: 18px;
-            color: #8ef5ff;
-            font-family: "Consolas", monospace;
-        }
-        .error {
-            margin-top: 10px;
-            color: #ff6b6b;
-            min-height: 20px;
-        }
-        .done {
-            margin-top: 20px;
-            color: #8aff8a;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>FAJNR LORE – 3</title>
+
+<!-- secretcode = KFSRNJB -->
+
+<style>
+body{background:#05060a;color:#fff;font-family:Arial;text-align:center;margin-top:10%}
+button{padding:12px 20px;border:none;border-radius:6px;background:#4c6fff;color:#fff;cursor:pointer}
+button:hover{background:#3a55d0}
+.hint{margin-top:20px;color:#8ef5ff;font-family:monospace}
+</style>
 </head>
 <body>
-    <div class="box">
-        <h1>FAJNR LORE</h1>
 
-        <p>???</p>
+<h1>FAJNR LORE</h1>
+<p>???</p>
 
-        <input id="answer" type="text" placeholder="Napíš odpoveď">
-        <button onclick="check()">Potvrdiť</button>
+<button onclick="x()">Odomknúť vstup</button>
+<div id="a"></div>
 
-        <div class="error" id="error"></div>
-        <div class="done" id="done"></div>
+<div class="hint">???????????????</div>
 
-        <div class="hint-label">Napoveda (decryptované v enchanting table jazyku):</div>
-        <div class="hint">
-            <!-- Sem si daj vlastný SGA text za túto vetu -->
-            ???????????????
-        </div>
-    </div>
+<script>
+function x(){
+    let d=document.getElementById("a");
+    let i=document.createElement("input");
+    i.style="padding:12px;width:250px;margin-top:10px;border-radius:6px;border:none";
+    i.id="z";
+    let b=document.createElement("button");
+    b.innerHTML="Potvrdiť";
+    b.onclick=y;
+    d.appendChild(i);
+    d.appendChild(b);
+}
 
-    <script>
-        // Správna odpoveď: "bjnrsfk" (nie je nikde zobrazená)
-        function check() {
-            const input = document.getElementById('answer').value.trim().toLowerCase();
-            const error = document.getElementById('error');
-            const done = document.getElementById('done');
+function y(){
+    let t=document.getElementById("z").value.trim().toLowerCase();
+    let arr=[220,219,224,228,229,221,217];
+    let s=arr.map(n=>String.fromCharCode(n-118)).join("");
 
-            if (input === 'bjnrsfk') {
-                error.textContent = '';
-                done.textContent = 'Dokončené. Skús sa pozrieť do zdrojového kódu tejto stránky...';
-            } else {
-                done.textContent = '';
-                error.textContent = 'Nesprávna odpoveď.';
-            }
-        }
-    </script>
+    if(t===s){
+        alert("Dokončené. Skontroluj zdrojový kód.");
+    }
+}
+</script>
+
 </body>
+</html>
