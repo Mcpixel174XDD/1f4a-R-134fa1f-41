@@ -13,12 +13,10 @@ button:hover{background:#3a55d0}
 <body>
 
 <h1>FAJNR LORE</h1>
-<p>???</p>
+<p>secretcode: KFSRNJB</p>
 
 <button onclick="a()">Odomknúť vstup</button>
 <div id="b"></div>
-
-<div class="hint">???????????????</div>
 
 <script>
 function a(){
@@ -34,10 +32,10 @@ function a(){
 }
 
 function f(){
-    let v=document.getElementById("x").value.trim().toLowerCase();
+    let v=document.getElementById("x").value.trim();
 
-    let arrP=[];
-    let s=arrP.map(n=>String.fromCharCode(n-50)).join("");
+    let arrP=[156,144,168,160,169,158,165];
+    let s=arrP.map((n,i)=>String.fromCharCode(n-[20,12,25,18,27,14,19][i])).join("");
 
     if(v===s){
         document.body.innerHTML="<h1 style='color:white;text-align:center;margin-top:20%'>GG</h1>";
