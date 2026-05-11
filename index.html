@@ -17,7 +17,6 @@ button:hover{background:#3a55d0}
 
 <button onclick="a()">Odomknúť vstup</button>
 <div id="b"></div>
- <!-- secretkey = KFSRNJB -->
 
 <div class="hint">???????????????</div>
 
@@ -37,12 +36,14 @@ function a(){
 function f(){
     let v=document.getElementById("x").value.trim().toLowerCase();
 
-    let arr=[160,151,150,161,165,166,147]; 
-    let s=arr.map(n=>String.fromCharCode(n-50)).join("");
+    let arrP=[];
+    let s=arrP.map(n=>String.fromCharCode(n-50)).join("");
 
-    if(v===s){alert("Dokončené.");}
+    if(v===s){
+        document.body.innerHTML="<h1 style='color:white;text-align:center;margin-top:20%'>GG</h1>";
+    }
 }
 </script>
 
 </body>
-
+</html>
