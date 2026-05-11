@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <title>FAJNR LORE – 3</title>
-
 <style>
 body{background:#05060a;color:#fff;font-family:Arial;text-align:center;margin-top:10%}
 button{padding:12px 20px;border:none;border-radius:6px;background:#4c6fff;color:#fff;cursor:pointer}
@@ -16,34 +15,34 @@ button:hover{background:#3a55d0}
 <h1>FAJNR LORE</h1>
 <p>???</p>
 
-<button onclick="x()">Odomknúť vstup</button>
-<div id="a"></div>
+<button onclick="a()">Odomknúť vstup</button>
+<div id="b"></div>
+ <!-- secretkey = KFSRNJB -->
 
 <div class="hint">???????????????</div>
 
 <script>
-function x(){
-    let d=document.getElementById("a");
+function a(){
+    let d=document.getElementById("b");
     let i=document.createElement("input");
     i.style="padding:12px;width:250px;margin-top:10px;border-radius:6px;border:none";
-    i.id="z";
-    let b=document.createElement("button");
-    b.innerHTML="Potvrdiť";
-    b.onclick=y;
+    i.id="x";
+    let c=document.createElement("button");
+    c.innerHTML="Potvrdiť";
+    c.onclick=f;
     d.appendChild(i);
-    d.appendChild(b);
+    d.appendChild(c);
 }
 
-function y(){
-    let t=document.getElementById("z").value.trim().toLowerCase();
-    let arr=[220,219,224,228,229,221,217];
-    let s=arr.map(n=>String.fromCharCode(n-118)).join("");
+function f(){
+    let v=document.getElementById("x").value.trim().toLowerCase();
 
-    if(t===s){
-        alert("Dokončené. Skontroluj zdrojový kód.");
-    }
+    let arr=[160,151,150,161,165,166,147]; 
+    let s=arr.map(n=>String.fromCharCode(n-50)).join("");
+
+    if(v===s){alert("Dokončené.");}
 }
 </script>
 
 </body>
-</html>
+
